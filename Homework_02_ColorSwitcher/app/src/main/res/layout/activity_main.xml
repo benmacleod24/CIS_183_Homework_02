@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".MainActivity">
+
+    <SeekBar
+        android:id="@+id/ui_seek_blue_color"
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="78dp"
+        android:layout_marginBottom="78dp"
+        android:max="255"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_ui_rgb_value"
+        app:layout_constraintEnd_toEndOf="@+id/txt_blue_color_value"
+        app:layout_constraintStart_toStartOf="@+id/txt_ui_seek_label_blue"
+        app:layout_constraintTop_toBottomOf="@+id/txt_ui_seek_label_green" />
+
+    <TextView
+        android:id="@+id/txt_ui_seek_label_blue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="7dp"
+        android:text="Blue Slider"
+        app:layout_constraintBottom_toTopOf="@+id/ui_seek_blue_color"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_blue_color_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="36dp"
+        android:layout_marginBottom="7dp"
+        android:text="0"
+        app:layout_constraintBottom_toTopOf="@+id/ui_seek_blue_color"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <SeekBar
+        android:id="@+id/ui_seek_green_color"
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="25dp"
+        android:max="255"
+        app:layout_constraintBottom_toTopOf="@+id/txt_ui_seek_label_blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txt_ui_seek_label_green" />
+
+    <TextView
+        android:id="@+id/txt_ui_seek_label_green"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="103dp"
+        android:text="Green Slider"
+        app:layout_constraintStart_toStartOf="@+id/ui_seek_green_color"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_green_color_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="0"
+        app:layout_constraintBottom_toTopOf="@+id/ui_seek_green_color"
+        app:layout_constraintEnd_toEndOf="@+id/ui_seek_green_color" />
+
+    <SeekBar
+        android:id="@+id/ui_seek_red_color"
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="63dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="66dp"
+        android:max="255"
+        app:layout_constraintBottom_toBottomOf="@+id/ui_seek_green_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_red_color_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="7dp"
+        android:text="0"
+        app:layout_constraintBottom_toTopOf="@+id/ui_seek_red_color"
+        app:layout_constraintEnd_toEndOf="@+id/ui_seek_red_color" />
+
+    <TextView
+        android:id="@+id/txt_ui_seek_label_red"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="Red Slider"
+        app:layout_constraintBottom_toTopOf="@+id/ui_seek_red_color"
+        app:layout_constraintStart_toStartOf="@+id/ui_seek_red_color" />
+
+    <TextView
+        android:id="@+id/txt_ui_hex_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="31dp"
+        android:text="Hex Value"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ui_seek_blue_color" />
+
+    <TextView
+        android:id="@+id/txt_ui_rgb_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="36dp"
+        android:layout_marginBottom="50dp"
+        android:text="RGB Value"
+        app:layout_constraintBottom_toTopOf="@+id/btn_ui_save_color"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_ui_rgb_value"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="RGB Value"
+        android:textAlignment="viewEnd"
+        app:layout_constraintEnd_toEndOf="@+id/txt_ui_rgb_label"
+        app:layout_constraintTop_toBottomOf="@+id/txt_ui_rgb_label" />
+
+    <TextView
+        android:id="@+id/txt_ui_hex_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Hex Value"
+        app:layout_constraintStart_toStartOf="@+id/txt_ui_hex_label"
+        app:layout_constraintTop_toBottomOf="@+id/txt_ui_hex_label" />
+
+    <Button
+        android:id="@+id/btn_ui_save_color"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="319dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="16dp"
+        android:text="Save Color"
+        app:layout_constraintBottom_toTopOf="@+id/lv_ui_list_of_colors"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ListView
+        android:id="@+id/lv_ui_list_of_colors"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_ui_save_color" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
